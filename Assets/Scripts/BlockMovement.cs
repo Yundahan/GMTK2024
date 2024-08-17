@@ -59,7 +59,6 @@ public class BlockMovement : MonoBehaviour
     {
         Vector2 size = new Vector2(Mathf.Round(GetComponent<Collider2D>().bounds.size.x), Mathf.Round(GetComponent<Collider2D>().bounds.size.y));
         float x = size.x % 2 == 1 ? Mathf.Round(transform.position.x) : Mathf.Round(transform.position.x - 0.5f) + 0.5f;
-        //float y = size.y % 2 == 1 ? Mathf.Round(transform.position.y) : Mathf.Round(transform.position.y - 0.5f) + 0.5f;
         Vector3 newPosition = new Vector3(x, transform.position.y, 0f);
         Vector3 changeVector = newPosition - transform.position;
         transform.position = newPosition;
@@ -79,8 +78,6 @@ public class BlockMovement : MonoBehaviour
 
     private bool CheckPositionValid(Vector3 changeVector)
     {
-        bool valid = false;
-
         foreach (GameObject go in currentCollisions)
         {
             if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, leftScale) || GameObject.ReferenceEquals(go, rightScale))
@@ -88,14 +85,14 @@ public class BlockMovement : MonoBehaviour
                 if (go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.min + changeVector + new Vector3(0.01f, 0.01f, 0f)) &&
                     go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.max + changeVector - new Vector3(0.01f, 0.01f, 0f)))
                 {
-                    valid = true;//kein return weil noch ein anderer block an der stelle sein könnte was die position invalide macht
+                    return true;
                 } else
                 {
-                    return false;//return weil this nicht komplett in der area ist wo es sein soll
+                    return false;//return false weil this nicht komplett in der area ist wo es sein soll
                 }
             }
         }
 
-        return valid;
+        return false;
     }
 }
