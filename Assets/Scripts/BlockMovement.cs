@@ -59,8 +59,8 @@ public class BlockMovement : MonoBehaviour
     {
         Vector2 size = new Vector2(Mathf.Round(GetComponent<Collider2D>().bounds.size.x), Mathf.Round(GetComponent<Collider2D>().bounds.size.y));
         float x = size.x % 2 == 1 ? Mathf.Round(transform.position.x) : Mathf.Round(transform.position.x - 0.5f) + 0.5f;
-        float y = size.y % 2 == 1 ? Mathf.Round(transform.position.y) : Mathf.Round(transform.position.y - 0.5f) + 0.5f;
-        Vector3 newPosition = new Vector3(x, y, 0f);
+        //float y = size.y % 2 == 1 ? Mathf.Round(transform.position.y) : Mathf.Round(transform.position.y - 0.5f) + 0.5f;
+        Vector3 newPosition = new Vector3(x, transform.position.y, 0f);
         Vector3 changeVector = newPosition - transform.position;
         transform.position = newPosition;
         isBeingDragged = false;

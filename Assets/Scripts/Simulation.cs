@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class Simulation : MonoBehaviour
 {
     public ScaleWeight leftScale;
     public ScaleWeight rightScale;
+
+    public float scaleRange;
+    public string nextLevel;
 
     private BlockMovement[] buildingBlocks;
     private ScaleArea[] scaleAreas;
@@ -29,9 +36,9 @@ public class Simulation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (IsGameWon())
         {
-            Debug.Log("game win: " + IsGameWon());
+            NextScene();
         }
     }
 
@@ -43,6 +50,11 @@ public class Simulation : MonoBehaviour
     public float GetTotalBlockWeight()
     {
         return totalBlockWeight;
+    }
+
+    public float GetScaleRange()
+    {
+        return scaleRange;
     }
 
     public bool IsGameWon()
@@ -61,5 +73,20 @@ public class Simulation : MonoBehaviour
         }
 
         return selectionArea.GetRemainingBlocks() == 0;
+    }
+    public void NextScene()
+    {
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextLevel);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

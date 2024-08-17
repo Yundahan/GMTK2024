@@ -4,26 +4,37 @@ using UnityEngine;
 
 public class ScaleWeight : MonoBehaviour
 {
-    public SpringJoint2D otherScaleSpring;
     public Rigidbody2D scaleFloor;
+    public ScaleWeight otherScale;
+    public float SPEED = 1f;
 
     private Simulation simulation;
-
     private List<GameObject> currentCollisions = new List<GameObject>();
-    private float initialSpringDistance;
+
+    private float restingY;
 
     // Start is called before the first frame update
     void Start()
     {
         simulation = FindObjectOfType<Simulation>();
-        initialSpringDistance = otherScaleSpring.distance;
+        restingY = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float divisor = simulation.GetTotalBlockWeight() == 0 ? 1f : simulation.GetTotalBlockWeight();
-        otherScaleSpring.distance = initialSpringDistance * (1f - 0.5f * GetWeight() / divisor);
+        float scaleRange = simulation.GetScaleRange();
+        float totalWeight = simulation.GetTotalBlockWeight();
+        float weight = GetWeight();
+        float otherScaleWeight = otherScale.GetWeight();
+
+        float goalY = restingY + scaleRange * ((otherScaleWeight - weight) / totalWeight);
+        
+        if (Mathf.Abs(goalY - transform.position.y) > 0.01f)
+        {
+            Vector3 direction = new Vector3(transform.position.x, goalY, 0f) - transform.position;
+            transform.position += direction.normalized * Time.deltaTime * SPEED;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -47,9 +58,7 @@ public class ScaleWeight : MonoBehaviour
         int weight = 0;
 
         foreach (GameObject go in currentCollisions) {
-            if (go.GetComponent<BlockMovement>() != null 
-                && !go.GetComponent<BlockMovement>().IsBeingDragged()
-                && Mathf.Abs(go.GetComponent<Rigidbody2D>().velocity.y - scaleFloor.velocity.y) < 0.1)
+            if (go.GetComponent<BlockMovement>() != null && !go.GetComponent<BlockMovement>().IsBeingDragged())
             {
                 weight += Mathf.RoundToInt(go.GetComponent<Rigidbody2D>().mass);
             }
