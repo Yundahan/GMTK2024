@@ -38,8 +38,8 @@ public class ScaleArea : MonoBehaviour
     {
         foreach(GameObject go in currentCollisions)
         {
-            if (!go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.min + new Vector3(0.01f, 0.01f, 0f)) ||
-                !go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.max - new Vector3(0.01f, 0.01f, 0f)))
+            if (!this.GetComponent<BoxCollider2D>().bounds.Contains(go.GetComponent<Collider2D>().bounds.min + new Vector3(0.01f, 0.01f, 0f)) ||
+                !this.GetComponent<BoxCollider2D>().bounds.Contains(go.GetComponent<Collider2D>().bounds.max - new Vector3(0.01f, 0.01f, 0f)))
             {
                 return true;
             }
