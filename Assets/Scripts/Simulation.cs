@@ -11,12 +11,19 @@ public class Simulation : MonoBehaviour
     private ScaleArea[] scaleAreas;
     private SelectionArea selectionArea;
 
+    private float totalBlockWeight = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         buildingBlocks = FindObjectsOfType<BlockMovement>();
         scaleAreas = FindObjectsOfType<ScaleArea>();
         selectionArea = FindObjectOfType<SelectionArea>();
+
+        foreach (BlockMovement block in FindObjectOfType<Simulation>().GetAllBuildingBlocks())
+        {
+            totalBlockWeight += block.GetComponent<Rigidbody2D>().mass;
+        }
     }
 
     // Update is called once per frame
@@ -24,13 +31,18 @@ public class Simulation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            IsGameWon();
+            Debug.Log("game win: " + IsGameWon());
         }
     }
 
     public BlockMovement[] GetAllBuildingBlocks()
     {
         return buildingBlocks;
+    }
+
+    public float GetTotalBlockWeight()
+    {
+        return totalBlockWeight;
     }
 
     public bool IsGameWon()
@@ -47,6 +59,7 @@ public class Simulation : MonoBehaviour
         {
             return false;
         }
+
         return selectionArea.GetRemainingBlocks() == 0;
     }
 }

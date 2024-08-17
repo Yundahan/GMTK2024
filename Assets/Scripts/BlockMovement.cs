@@ -11,13 +11,14 @@ public class BlockMovement : MonoBehaviour
     private bool isBeingDragged;
     private Vector3 startPosition;
     private Vector3 relativeMousePosition;
+    private Vector3 home;
 
     private List<GameObject> currentCollisions = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        home = transform.position;
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class BlockMovement : MonoBehaviour
 
         if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, leftScale) || GameObject.ReferenceEquals(go, rightScale) && !isBeingDragged)
         {
-            transform.position = selectionArea.transform.position;
+            transform.position = home;
         }
     }
 
