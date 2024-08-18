@@ -116,6 +116,7 @@ public class Simulation : MonoBehaviour
     public void NextScene()
     {
         audioVolumeValue = FindObjectOfType<Slider>().value;
+        FindObjectOfType<BGMHandler>().PlaySFX(1);
         StartCoroutine(LoadNextScene());
     }
 

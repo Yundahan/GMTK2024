@@ -13,7 +13,7 @@ public class BGMHandler : MonoBehaviour
     public Slider slider;
 
     public AudioSource[] sources = new AudioSource[3];//bronze is 0, silver is 1, gold is 2
-    public AudioSource[] sfx = new AudioSource[1]; //Reset is 0
+    public AudioSource[] sfx = new AudioSource[2]; //Reset is 0, Victory is 1
 
     public float switchDuration = 0.5f;
     float lastSwitch;
