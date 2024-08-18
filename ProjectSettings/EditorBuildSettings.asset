@@ -13,7 +13,10 @@ EditorBuildSettings:
     guid: 175d869de1a5c484482cd4946ba3d17a
   - enabled: 1
     path: Assets/Scenes/Level02.unity
-    guid: 815c80a8510a2224c82b05b42ed01b9c
+    guid: 30361d34a8690254382f0c96d67b5500
+  - enabled: 1
+    path: Assets/Scenes/Level03.unity
+    guid: 229cfa2aa31ba6745bf300b5561388cb
   - enabled: 1
     path: Assets/Scenes/TestScenes/LeonTestScene02.unity
     guid: 7fb7b93b695fa2d48985b607c3f84dac
