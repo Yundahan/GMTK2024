@@ -12,14 +12,14 @@ public class BGMHandler : MonoBehaviour
 
     public Slider slider;
 
-    static float audioTimer;
-    static float audioVolumeValue = 0.1F;
     public AudioSource[] sources = new AudioSource[3];//bronze is 0, silver is 1, gold is 2
    //public AudioSource[] sfx = new AudioSource[8]; For SFX
 
     public float switchDuration = 0.5f;
     float lastSwitch;
-    int current = 0;
+    int currentTrack = 0;
+    private int oldTrack;
+    private bool switchTracks = false;
 
 
 
@@ -38,54 +38,54 @@ public class BGMHandler : MonoBehaviour
 
     void Start()
     {
-        sources[current] = GetComponent<AudioSource>();
-        sources[current].Play();
+        foreach (AudioSource so in sources)
+        {
+            so.volume = 0;
+            so.Play();
+        }
+
+        sources[currentTrack] = GetComponent<AudioSource>();
+        sources[currentTrack].volume = 1;
 
         mixer.SetFloat("Volume", Mathf.Log10(slider.value) * 20);
 
         lastSwitch = -switchDuration;
 
-        foreach (AudioSource s in sfx)
+        /*foreach (AudioSource s in sfx)
         {
             s.loop = false;
-        }
+        }*/
     }
 
-    public float GetAudioTimer()
-    {
-        return audioTimer;
-    }
-
-    public float GetAudioVolumeValue()
-    {
-        return audioVolumeValue;
-    }
 
 
 
     // Update is called once per frame
     void Update()
     {
-        float timeSinceSwitch = Time.time - lastSwitch;
-
-        if (timeSinceSwitch <= switchDuration)
+        if (switchTracks)
         {
-            sources[current].volume = timeSinceSwitch;
-            sources[1 - current].volume = switchDuration - timeSinceSwitch;
+            sources[oldTrack].volume = sources[oldTrack].volume -0.1F;
+            sources[currentTrack].volume = sources[currentTrack].volume + 0.1F;
+
+            if (sources[oldTrack].volume == 0)
+            {
+                switchTracks = false;
+            }
         }
+
+       
     }
 
-    public void SwitchTracks()
-    {
-        current = 1 - current;
-        lastSwitch = Time.time;
-    }
 
-    public void Reset(int value)
+    public void SetLevelTier (int level)
     {
-        if (value != current)
+        if (level != currentTrack)
         {
-            SwitchTracks();
+            switchTracks = true;
+            oldTrack = currentTrack;
+            currentTrack = level;
+           
         }
     }
 }

@@ -10,6 +10,7 @@ public class Simulation : MonoBehaviour
 {
     public float scaleRange;
     public string nextLevel;
+    public int levelAudioTier;
 
     private ScaleWeight firstScale;
     private ScaleWeight secondScale;
@@ -25,7 +26,8 @@ public class Simulation : MonoBehaviour
     private float levelFinishedTimer;
     private bool levelFinished;
 
-    public int levelAudioTier;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class Simulation : MonoBehaviour
 
         levelStartedTimer = Time.time;
         levelFinished = false;
+        FindObjectOfType<BGMHandler>().SetLevelTier(levelAudioTier);
     }
 
     // Update is called once per frame
