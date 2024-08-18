@@ -13,16 +13,13 @@ public class BGMHandler : MonoBehaviour
     public Slider slider;
 
     public AudioSource[] sources = new AudioSource[3];//bronze is 0, silver is 1, gold is 2
-   public AudioSource[] sfx = new AudioSource[1]; //Reset is 0
+    public AudioSource[] sfx = new AudioSource[1]; //Reset is 0
 
     public float switchDuration = 0.5f;
     float lastSwitch;
     int currentTrack = 0;
     private int oldTrack;
     private bool switchTracks = false;
-
-
-
 
     private void Awake()
     {
@@ -58,9 +55,6 @@ public class BGMHandler : MonoBehaviour
         }
     }
 
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -74,15 +68,12 @@ public class BGMHandler : MonoBehaviour
                 switchTracks = false;
             }
         }
-
-       
     }
 
     public void PlaySFX(int sfxselection)
     {
         sfx[sfxselection].Play();
     }
-
 
     public void SetLevelTier (int level)
     {
@@ -91,7 +82,6 @@ public class BGMHandler : MonoBehaviour
             switchTracks = true;
             oldTrack = currentTrack;
             currentTrack = level;
-           
         }
     }
 }
