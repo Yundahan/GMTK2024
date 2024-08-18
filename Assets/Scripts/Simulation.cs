@@ -86,6 +86,11 @@ public class Simulation : MonoBehaviour
         return scaleRange;
     }
 
+    public bool IsLevelFinished()
+    {
+        return levelFinished;
+    }
+
     public void Reset()
     {
         FindObjectOfType<BGMHandler>().PlaySFX(0);

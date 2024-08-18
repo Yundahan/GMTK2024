@@ -9,6 +9,8 @@ public class BlockMovement : MonoBehaviour
     public GameObject firstScale;
     public GameObject secondScale;
 
+    private Simulation simulation;
+
     private bool isBeingDragged;
     private bool isOutsideOfArea;
     private bool weightCounts;
@@ -24,6 +26,7 @@ public class BlockMovement : MonoBehaviour
     void Start()
     {
         ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
+        simulation = FindObjectOfType<Simulation>();
 
         if (scales.Length >= 2)
         {
@@ -83,6 +86,11 @@ public class BlockMovement : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (simulation.IsLevelFinished())
+        {
+            return;
+        }
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         relativeMousePosition = transform.position - mousePosition;
         startPosition = transform.position;
