@@ -57,7 +57,6 @@ public class BlockMovement : MonoBehaviour
         {
             float h, s, v;
             Color.RGBToHSV(GetComponent<SpriteRenderer>().color, out h, out s, out v);
-            Debug.Log("H: " + h + " S: " + s + " V: " + v);
             Color newColor = Color.HSVToRGB(h, 0, v);
             GetComponent<SpriteRenderer>().color = newColor;
         } else
