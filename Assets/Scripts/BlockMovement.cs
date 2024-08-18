@@ -29,6 +29,12 @@ public class BlockMovement : MonoBehaviour
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = mousePosition + relativeMousePosition;
         }
+
+        if (transform.position.y < -100f)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            transform.position = home;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
