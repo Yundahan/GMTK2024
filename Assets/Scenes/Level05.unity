@@ -805,11 +805,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.99}
-      - {x: -0.99, y: 0.99}
-      - {x: -0.99, y: 0}
-      - {x: 0, y: -0.99}
-      - {x: 0.99, y: 0}
+    - - {x: 0, y: 1}
+      - {x: -1, y: 1}
+      - {x: -1, y: 0}
+      - {x: 0, y: -1}
+      - {x: 1, y: 0}
       - {x: 0, y: 0}
   m_UseDelaunayMesh: 0
 --- !u!50 &200842073
@@ -2279,12 +2279,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1, y: 0.5}
-      - {x: -1, y: 0.47}
-      - {x: -0.03, y: -0.5}
+    - - {x: 0, y: 0.5}
+      - {x: -1, y: 0.5}
+      - {x: 0, y: -0.5}
       - {x: 1, y: -0.5}
-      - {x: 1, y: -0.47}
-      - {x: 0.03, y: 0.5}
   m_UseDelaunayMesh: 0
 --- !u!50 &637479135
 Rigidbody2D:
@@ -4347,12 +4345,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1, y: 0.5}
-      - {x: -1, y: 0.47}
-      - {x: -0.03, y: -0.5}
+    - - {x: 0, y: 0.5}
+      - {x: -1, y: 0.5}
+      - {x: 0, y: -0.5}
       - {x: 1, y: -0.5}
-      - {x: 1, y: -0.47}
-      - {x: 0.03, y: 0.5}
   m_UseDelaunayMesh: 0
 --- !u!50 &1162143466
 Rigidbody2D:
