@@ -65,8 +65,8 @@ public class BGMHandler : MonoBehaviour
     {
         if (switchTracks)
         {
-            sources[oldTrack].volume = sources[oldTrack].volume -0.1F;
-            sources[currentTrack].volume = sources[currentTrack].volume + 0.1F;
+            sources[oldTrack].volume = sources[oldTrack].volume -0.05F;
+            sources[currentTrack].volume = sources[currentTrack].volume + 0.05F;
 
             if (sources[oldTrack].volume == 0)
             {
