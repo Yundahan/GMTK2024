@@ -1,24 +1,38 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
     public GameObject selectionArea;
-    public GameObject leftScale;
-    public GameObject rightScale;
+    public GameObject firstScale;
+    public GameObject secondScale;
 
     private bool isBeingDragged;
+    private bool isOutsideOfArea;
+    private bool weightCounts;
+    private Color initColor;
     private Vector3 startPosition;
     private Vector3 relativeMousePosition;
     private Vector3 home;
+    private float dragTimer;
 
     private List<GameObject> currentCollisions = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
+        ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
+
+        if (scales.Length >= 2)
+        {
+            firstScale = scales[0].gameObject;
+            secondScale = scales[1].gameObject;
+        }
+
         home = transform.position;
+        initColor = GetComponent<SpriteRenderer>().color;
     }
 
     // Update is called once per frame
@@ -28,6 +42,20 @@ public class BlockMovement : MonoBehaviour
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = mousePosition + relativeMousePosition;
+            weightCounts = false;
+        }
+        
+        if (!isBeingDragged && Time.time - dragTimer > 0.1f && Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y) < 0.1f)
+        {
+            weightCounts = true;
+        }
+
+        if(!isBeingDragged && isOutsideOfArea)
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        } else
+        {
+            GetComponent<SpriteRenderer>().color = initColor;
         }
 
         if (transform.position.y < -100f)
@@ -47,7 +75,7 @@ public class BlockMovement : MonoBehaviour
         GameObject go = collider.gameObject;
         currentCollisions.Remove(go);
 
-        if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, leftScale) || GameObject.ReferenceEquals(go, rightScale) && !isBeingDragged)
+        if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, firstScale) || GameObject.ReferenceEquals(go, secondScale) && !isBeingDragged)
         {
             transform.position = home;
         }
@@ -69,6 +97,7 @@ public class BlockMovement : MonoBehaviour
         Vector3 changeVector = newPosition - transform.position;
         transform.position = newPosition;
         isBeingDragged = false;
+        dragTimer = Time.time;
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
         if (!CheckPositionValid(changeVector))
@@ -82,11 +111,33 @@ public class BlockMovement : MonoBehaviour
         return isBeingDragged;
     }
 
+    public bool IsOutsideOfArea()
+    {
+        return isOutsideOfArea;
+    }
+
+    public void SetIsOutsideOfArea(bool value)
+    {
+        isOutsideOfArea = value;
+    }
+
+    public bool GetWeightCounts()
+    {
+        return weightCounts;
+    }
+
+    public Vector3[] GetColliderPointsInWorldSpace()
+    {
+        Vector2[] colliderPoints = GetComponent<PolygonCollider2D>().points;
+        Vector3[] colliderPointsInWorldSpace = colliderPoints.Select(point => transform.TransformPoint(point)).ToArray();
+        return colliderPointsInWorldSpace;
+    }
+
     private bool CheckPositionValid(Vector3 changeVector)
     {
         foreach (GameObject go in currentCollisions)
         {
-            if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, leftScale) || GameObject.ReferenceEquals(go, rightScale))
+            if (GameObject.ReferenceEquals(go, selectionArea) || GameObject.ReferenceEquals(go, firstScale) || GameObject.ReferenceEquals(go, secondScale))
             {
                 if (go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.min + changeVector + new Vector3(0.01f, 0.01f, 0f)) &&
                     go.GetComponent<BoxCollider2D>().bounds.Contains(this.GetComponent<Collider2D>().bounds.max + changeVector - new Vector3(0.01f, 0.01f, 0f)))

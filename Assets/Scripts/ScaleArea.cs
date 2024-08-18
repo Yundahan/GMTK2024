@@ -4,42 +4,56 @@ using UnityEngine;
 
 public class ScaleArea : MonoBehaviour
 {
-    private List<GameObject> currentCollisions = new List<GameObject>();
+    private ScaleWeight scaleweight;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scaleweight = GetComponentInParent<ScaleWeight>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.GetComponent<BlockMovement>() != null)
+        foreach (GameObject go in scaleweight.GetAllHeldObjects())
         {
-            currentCollisions.Add(collider.gameObject);
-        }
-    }
+            Vector3[] colliderPoints = go.GetComponent<BlockMovement>().GetColliderPointsInWorldSpace();
+            bool isOutside = false;
 
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.gameObject.GetComponent<BlockMovement>() != null)
-        {
-            currentCollisions.Remove(collider.gameObject);
+            foreach (Vector3 point in colliderPoints)
+            {
+                if (!IsPointInArea(point))
+                {
+                    isOutside = true;
+                    break;
+                }
+            }
+
+            go.GetComponent<BlockMovement>().SetIsOutsideOfArea(isOutside);
         }
     }
 
     public bool ObjectsOutsideOfArea()
     {
-        foreach(GameObject go in currentCollisions)
+        foreach (GameObject go in scaleweight.GetAllHeldObjects())
         {
-            if (!this.GetComponent<BoxCollider2D>().bounds.Contains(go.GetComponent<Collider2D>().bounds.min + new Vector3(0.01f, 0.01f, 0f)) ||
-                !this.GetComponent<BoxCollider2D>().bounds.Contains(go.GetComponent<Collider2D>().bounds.max - new Vector3(0.01f, 0.01f, 0f)))
+            if (go.GetComponent<BlockMovement>().IsOutsideOfArea())
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool IsPointInArea(Vector3 point)
+    {
+        Vector2[] areaPoints = GetComponent<PolygonCollider2D>().points;
+        point = transform.InverseTransformPoint(point);
+
+        foreach (Vector2 areaPoint in areaPoints)
+        {
+            if (Mathf.Abs(areaPoint.x - point.x) < 0.3f && Mathf.Abs(areaPoint.y - point.y) < 0.3f)
             {
                 return true;
             }

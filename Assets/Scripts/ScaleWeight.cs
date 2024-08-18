@@ -50,6 +50,7 @@ public class ScaleWeight : MonoBehaviour
         if (collider.gameObject.GetComponent<BlockMovement>() != null)
         {
             currentCollisions.Remove(collider.gameObject);
+            collider.gameObject.GetComponent<BlockMovement>().SetIsOutsideOfArea(false);
         }
     }
 
@@ -57,13 +58,20 @@ public class ScaleWeight : MonoBehaviour
     {
         int weight = 0;
 
-        foreach (GameObject go in currentCollisions) {
-            if (go.GetComponent<BlockMovement>() != null && !go.GetComponent<BlockMovement>().IsBeingDragged())
+        foreach (GameObject go in currentCollisions)
+        {
+            BlockMovement block = go.GetComponent<BlockMovement>();
+            if (block != null && !block.IsBeingDragged() && block.GetWeightCounts())
             {
                 weight += Mathf.RoundToInt(go.GetComponent<Rigidbody2D>().mass);
             }
         }
 
         return weight;
+    }
+
+    public List<GameObject> GetAllHeldObjects()
+    {
+        return currentCollisions;
     }
 }
