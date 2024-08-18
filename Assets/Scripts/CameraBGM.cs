@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraBGM : MonoBehaviour
 {
     private static CameraBGM instance = null;
-    private AudioSource audio;
+    private new AudioSource audio;
 
     private void Awake()
     {
