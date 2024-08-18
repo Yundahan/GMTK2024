@@ -116,6 +116,11 @@ public class Simulation : MonoBehaviour
             return false;
         }
 
+        if (firstScale.GetWeight() + secondScale.GetWeight() != totalBlockWeight)
+        {
+            return false;
+        }
+
         return selectionArea.GetRemainingBlocks() == 0;
     }
     public void NextScene()
