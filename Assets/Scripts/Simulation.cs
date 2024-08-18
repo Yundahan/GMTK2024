@@ -28,8 +28,6 @@ public class Simulation : MonoBehaviour
     private bool levelFinished;
 
     static float audioVolumeValue = 0.191F;
-
-
     
     // Start is called before the first frame update
     void Start()
@@ -91,6 +89,7 @@ public class Simulation : MonoBehaviour
     public void Reset()
     {
         FindObjectOfType<BGMHandler>().PlaySFX(0);
+
         foreach (BlockMovement block in buildingBlocks)
         {
             block.Reset();
