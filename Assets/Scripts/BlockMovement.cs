@@ -55,7 +55,7 @@ public class BlockMovement : MonoBehaviour
 
         if(!isBeingDragged && isOutsideOfArea)
         {
-            GetComponent<SpriteRenderer>().color = Color.red;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 0.6f, 0.6f, 1f);
         } else
         {
             GetComponent<SpriteRenderer>().color = initColor;

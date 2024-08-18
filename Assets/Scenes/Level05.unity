@@ -2076,7 +2076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94968ed5fcfc34abbcd8b042528c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleRange: 2
+  scaleRange: 1.5
   nextLevel: LeonTestScene02
   levelAudioTier: 0
 --- !u!1 &529037399
