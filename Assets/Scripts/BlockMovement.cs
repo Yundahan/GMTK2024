@@ -126,6 +126,11 @@ public class BlockMovement : MonoBehaviour
         return weightCounts;
     }
 
+    public void Reset()
+    {
+        transform.position = home;
+    }
+
     public Vector3[] GetColliderPointsInWorldSpace()
     {
         Vector2[] colliderPoints = GetComponent<PolygonCollider2D>().points;

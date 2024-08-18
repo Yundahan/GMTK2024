@@ -88,6 +88,14 @@ public class Simulation : MonoBehaviour
         return scaleRange;
     }
 
+    public void Reset()
+    {
+        foreach (BlockMovement block in buildingBlocks)
+        {
+            block.Reset();
+        }
+    }
+
     public bool IsGameWon()
     {
         foreach (ScaleArea scaleArea in scaleAreas)
