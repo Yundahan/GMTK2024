@@ -44,7 +44,7 @@ public class BGMHandler : MonoBehaviour
         sources[currentTrack] = GetComponent<AudioSource>();
         sources[currentTrack].volume = 1;
 
-        mixer.SetFloat("Volume", Mathf.Log10(slider.value) * 20);
+        mixer.SetFloat("MasterVolume", Mathf.Log10(slider.value) * 20);
 
         lastSwitch = -switchDuration;
 
