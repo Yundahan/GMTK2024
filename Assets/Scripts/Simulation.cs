@@ -8,12 +8,11 @@ using UnityEngine.SceneManagement;
 
 public class Simulation : MonoBehaviour
 {
-    public ScaleWeight leftScale;
-    public ScaleWeight rightScale;
-
     public float scaleRange;
     public string nextLevel;
 
+    private ScaleWeight firstScale;
+    private ScaleWeight secondScale;
     private BlockMovement[] buildingBlocks;
     private ScaleArea[] scaleAreas;
     private SelectionArea selectionArea;
@@ -26,6 +25,13 @@ public class Simulation : MonoBehaviour
         buildingBlocks = FindObjectsOfType<BlockMovement>();
         scaleAreas = FindObjectsOfType<ScaleArea>();
         selectionArea = FindObjectOfType<SelectionArea>();
+        ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
+
+        if (scales.Length >= 2)
+        {
+            firstScale = scales[0];
+            secondScale = scales[1];
+        }
 
         foreach (BlockMovement block in FindObjectOfType<Simulation>().GetAllBuildingBlocks())
         {
@@ -67,7 +73,7 @@ public class Simulation : MonoBehaviour
             }
         }
 
-        if (leftScale.GetWeight() != rightScale.GetWeight())
+        if (firstScale.GetWeight() != secondScale.GetWeight())
         {
             return false;
         }
