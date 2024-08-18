@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class MuteButton : MonoBehaviour
 {
-    private Button button;
     public AudioMixer mixer;
+    public Sprite soundOn;
+    public Sprite soundOff;
+
+    private Button button;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +27,17 @@ public class MuteButton : MonoBehaviour
 
     public void ToggleMute()
     {
-        Debug.Log("§");
-       mixer.GetFloat("MusicVolume", out float musicVolume);
+        mixer.GetFloat("MusicVolume", out float musicVolume);
 
         if (musicVolume != -80)
         {
             mixer.SetFloat("MusicVolume", -80);
-            Debug.Log("F");
+            GetComponent<Image>().sprite = soundOff;
         }
         else
         {
             mixer.SetFloat("MusicVolume", 0);
+            GetComponent<Image>().sprite = soundOn;
         }
 
     }
