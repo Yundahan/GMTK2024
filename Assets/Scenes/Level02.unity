@@ -407,10 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94968ed5fcfc34abbcd8b042528c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftScale: {fileID: 1944163422}
-  rightScale: {fileID: 1022794680}
   scaleRange: 2
-  nextLevel: Level02
+  nextLevel: Level03
 --- !u!1 &582434231
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,17 +8,22 @@ using UnityEngine.SceneManagement;
 
 public class Simulation : MonoBehaviour
 {
-    public ScaleWeight leftScale;
-    public ScaleWeight rightScale;
-
     public float scaleRange;
     public string nextLevel;
 
+    private ScaleWeight firstScale;
+    private ScaleWeight secondScale;
     private BlockMovement[] buildingBlocks;
     private ScaleArea[] scaleAreas;
     private SelectionArea selectionArea;
 
+    private float LEVEL_START_TIME = 1f;
+    private float LEVEL_END_TIME = 1f;
+
     private float totalBlockWeight = 0;
+    private float levelStartedTimer;
+    private float levelFinishedTimer;
+    private bool levelFinished = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,17 +31,32 @@ public class Simulation : MonoBehaviour
         buildingBlocks = FindObjectsOfType<BlockMovement>();
         scaleAreas = FindObjectsOfType<ScaleArea>();
         selectionArea = FindObjectOfType<SelectionArea>();
+        ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
+
+        if (scales.Length >= 2)
+        {
+            firstScale = scales[0];
+            secondScale = scales[1];
+        }
 
         foreach (BlockMovement block in FindObjectOfType<Simulation>().GetAllBuildingBlocks())
         {
             totalBlockWeight += block.GetComponent<Rigidbody2D>().mass;
         }
+
+        levelStartedTimer = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGameWon())
+        if (IsGameWon() && Time.time - levelStartedTimer > LEVEL_START_TIME && !levelFinished)
+        {
+            levelFinished = true;
+            levelFinishedTimer = Time.time;
+        }
+
+        if (levelFinished && Time.time - levelFinishedTimer > LEVEL_END_TIME)
         {
             NextScene();
         }
@@ -67,7 +87,7 @@ public class Simulation : MonoBehaviour
             }
         }
 
-        if (leftScale.GetWeight() != rightScale.GetWeight())
+        if (firstScale.GetWeight() != secondScale.GetWeight())
         {
             return false;
         }

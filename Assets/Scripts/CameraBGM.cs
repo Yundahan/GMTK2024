@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public class CameraBGM : MonoBehaviour
 {
     private static CameraBGM instance = null;
-    public AudioSource audio;
+    public new AudioSource audio;
     public AudioMixer mixer;
 
     public Slider slider;
 
     static float audioTimer;
     static float audioVolumeValue = 0.1F;
+
 
 
 
