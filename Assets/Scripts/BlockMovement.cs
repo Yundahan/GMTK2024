@@ -55,7 +55,11 @@ public class BlockMovement : MonoBehaviour
 
         if(!isBeingDragged && isOutsideOfArea)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 0.6f, 0.6f, 1f);
+            float h, s, v;
+            Color.RGBToHSV(GetComponent<SpriteRenderer>().color, out h, out s, out v);
+            Debug.Log("H: " + h + " S: " + s + " V: " + v);
+            Color newColor = Color.HSVToRGB(h, 0, v);
+            GetComponent<SpriteRenderer>().color = newColor;
         } else
         {
             GetComponent<SpriteRenderer>().color = initColor;
