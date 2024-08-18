@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.036
+  m_Value: 0.191
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -525,8 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94968ed5fcfc34abbcd8b042528c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftScale: {fileID: 1944163422}
-  rightScale: {fileID: 1022794680}
   scaleRange: 2
   nextLevel: LeonTestScene02
 --- !u!82 &519420034
@@ -637,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bdcb3b1c7bd8541a52a4bd990c4161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
+  audio: {fileID: 519420034}
   mixer: {fileID: 24100000, guid: f6f2154d91e903c4e90915845ed6d75c, type: 2}
   slider: {fileID: 55584615}
 --- !u!1 &582434231
