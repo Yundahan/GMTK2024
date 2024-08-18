@@ -42,6 +42,13 @@ public class BGMHandler : MonoBehaviour
         sources[current].Play();
 
         mixer.SetFloat("Volume", Mathf.Log10(slider.value) * 20);
+
+        lastSwitch = -switchDuration;
+
+        foreach (AudioSource s in sfx)
+        {
+            s.loop = false;
+        }
     }
 
     public float GetAudioTimer()
@@ -55,18 +62,6 @@ public class BGMHandler : MonoBehaviour
     }
 
 
-
-
-
-    void Start()
-    {
-        lastSwitch = -switchDuration;
-
-        foreach (AudioSource s in sfx)
-        {
-            s.loop = false;
-        }
-    }
 
     // Update is called once per frame
     void Update()
