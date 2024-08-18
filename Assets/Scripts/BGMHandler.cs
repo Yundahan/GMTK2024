@@ -13,7 +13,7 @@ public class BGMHandler : MonoBehaviour
     public Slider slider;
 
     public AudioSource[] sources = new AudioSource[3];//bronze is 0, silver is 1, gold is 2
-   //public AudioSource[] sfx = new AudioSource[8]; For SFX
+   public AudioSource[] sfx = new AudioSource[1]; //Reset is 0
 
     public float switchDuration = 0.5f;
     float lastSwitch;
@@ -51,10 +51,11 @@ public class BGMHandler : MonoBehaviour
 
         lastSwitch = -switchDuration;
 
-        /*foreach (AudioSource s in sfx)
+        foreach (AudioSource s in sfx)
         {
             s.loop = false;
-        }*/
+            s.volume = 1;
+        }
     }
 
 
@@ -75,6 +76,11 @@ public class BGMHandler : MonoBehaviour
         }
 
        
+    }
+
+    public void PlaySFX(int sfxselection)
+    {
+        sfx[sfxselection].Play();
     }
 
 

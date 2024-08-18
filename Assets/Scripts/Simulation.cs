@@ -90,6 +90,7 @@ public class Simulation : MonoBehaviour
 
     public void Reset()
     {
+        FindObjectOfType<BGMHandler>().PlaySFX(0);
         foreach (BlockMovement block in buildingBlocks)
         {
             block.Reset();
