@@ -20,10 +20,10 @@ public class Simulation : MonoBehaviour
     private float LEVEL_START_TIME = 1f;
     private float LEVEL_END_TIME = 1f;
 
-    private float totalBlockWeight = 0;
+    private float totalBlockWeight;
     private float levelStartedTimer;
     private float levelFinishedTimer;
-    private bool levelFinished = false;
+    private bool levelFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -39,12 +39,15 @@ public class Simulation : MonoBehaviour
             secondScale = scales[1];
         }
 
+        totalBlockWeight = 0;
+
         foreach (BlockMovement block in FindObjectOfType<Simulation>().GetAllBuildingBlocks())
         {
             totalBlockWeight += block.GetComponent<Rigidbody2D>().mass;
         }
 
         levelStartedTimer = Time.time;
+        levelFinished = false;
     }
 
     // Update is called once per frame
