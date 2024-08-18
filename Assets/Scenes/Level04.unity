@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleRange: 1
-  nextLevel: Level02
+  nextLevel: Level05
   levelAudioTier: 0
 --- !u!1 &529037399
 GameObject:
