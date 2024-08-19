@@ -10,15 +10,17 @@ public class MuteButton : MonoBehaviour
     public Sprite soundOn;
     public Sprite soundOff;
 
-    public string volumeType;
-
     private Button button;
+
+    public string volumeType;
 
     // Start is called before the first frame update
     void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(ToggleMute);
+        mixer.GetFloat(volumeType, out float musicVolume);
+        GetComponent<Image>().sprite = musicVolume != -80 ? soundOn : soundOff;
     }
 
     // Update is called once per frame
