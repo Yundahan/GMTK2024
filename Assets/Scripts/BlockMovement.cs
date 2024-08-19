@@ -6,9 +6,9 @@ using UnityEngine;
 public class BlockMovement : MonoBehaviour
 {
     public GameObject selectionArea;
-    public GameObject firstScale;
-    public GameObject secondScale;
 
+    private GameObject firstScale;
+    private GameObject secondScale;
     private Simulation simulation;
 
     private bool isBeingDragged;
