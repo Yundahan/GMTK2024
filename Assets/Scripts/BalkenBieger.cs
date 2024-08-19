@@ -10,16 +10,18 @@ public class BalkenBieger : MonoBehaviour
     public Sprite zeigerGlowing;
     public Sprite zeigerDark;
 
-    private GameObject zeiger;
+    public GameObject zeigerParent;
+    public SpriteRenderer zeiger;
+
+    private float ANGULAR_INDICATOR_SPEED = 0.3f;
 
     private float horizontalScaleDistance;
     private float initialXScale;
+    private float zeigerAngle = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        zeiger = GetComponentsInChildren<Transform>().ToList()[1].gameObject;
-
         initialXScale = transform.localScale.x;
         horizontalScaleDistance = rightScale.transform.position.x - leftScale.transform.position.x;
     }
@@ -34,23 +36,38 @@ public class BalkenBieger : MonoBehaviour
         bool rightScaleHigher = rightScale.transform.position.y > leftScale.transform.position.y;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, rightScaleHigher ? angle : -angle));
 
-        TurnZeiger(angle);
+        TurnZeiger();
     }
 
-    private void TurnZeiger(float balkenAngle)
+    private void TurnZeiger()
     {
-        //WIP
-        float zeigerAngle = zeiger.transform.rotation.z;
-
         if (leftScale.GetWeight() < rightScale.GetWeight())
         {
-            zeiger.GetComponent<SpriteRenderer>().sprite = zeigerDark;
+            if (zeigerAngle >= -45f)
+            {
+                zeigerAngle -= ANGULAR_INDICATOR_SPEED;
+                zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
+            }
+
+            zeiger.sprite = zeigerDark;
         } else if (leftScale.GetWeight() > rightScale.GetWeight())
         {
-            zeiger.GetComponent<SpriteRenderer>().sprite = zeigerDark;
+            if (zeigerAngle <= 45f)
+            {
+                zeigerAngle += ANGULAR_INDICATOR_SPEED;
+                zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
+            }
+
+            zeiger.sprite = zeigerDark;
         } else //weights are even
         {
-            zeiger.GetComponent<SpriteRenderer>().sprite = zeigerGlowing;
+            if (Mathf.Abs(zeigerAngle) >= 0.1f)
+            {
+                zeigerAngle -= zeigerAngle / Mathf.Abs(zeigerAngle) * ANGULAR_INDICATOR_SPEED;
+                zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
+            }
+
+             zeiger.sprite = zeigerGlowing;
         }
     }
 }
