@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
+    public Vector2[] midpoints;
+
     private GameObject selectionArea;
     private GameObject firstScale;
     private GameObject secondScale;
@@ -144,6 +146,12 @@ public class BlockMovement : MonoBehaviour
         Vector2[] colliderPoints = GetComponent<PolygonCollider2D>().points;
         Vector3[] colliderPointsInWorldSpace = colliderPoints.Select(point => transform.TransformPoint(point)).ToArray();
         return colliderPointsInWorldSpace;
+    }
+
+    public Vector3[] GetMidpointsInWorldSpace()
+    {
+        Vector3[] midpointsInWorldSpace = midpoints.Select(point => transform.TransformPoint(point)).ToArray();
+        return midpointsInWorldSpace;
     }
 
     private bool CheckPositionValid(Vector3 changeVector)
