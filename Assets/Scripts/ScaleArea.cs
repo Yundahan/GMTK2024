@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScaleArea : MonoBehaviour
 {
+    public Vector2[] midpoints;
+
     private ScaleWeight scaleweight;
 
     // Start is called before the first frame update

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
+    public Vector2[] midpoints;
+
     private GameObject selectionArea;
     private GameObject firstScale;
     private GameObject secondScale;
