@@ -196,6 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0.5, y: 0}
+  - {x: -0.5, y: 0}
 --- !u!212 &37405896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1303,6 +1306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0, y: 0}
 --- !u!212 &821759593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1537,6 +1542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89fb31e57658894f98054e1d765b0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0.5, y: -0.5}
+  - {x: -0.5, y: -0.5}
+  - {x: -0.5, y: 0.5}
 --- !u!60 &839363478
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2923,6 +2932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0, y: 0}
 --- !u!212 &1495967822
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3122,6 +3133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89fb31e57658894f98054e1d765b0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0.333333, y: 0}
+  - {x: -0.333333, y: 0}
+  - {x: 0, y: 0}
 --- !u!60 &1499492530
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4472,6 +4487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: -0.25, y: 0.25}
+  - {x: 0.25, y: 0.25}
+  - {x: 0.25, y: -0.25}
 --- !u!212 &1819697809
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4646,6 +4665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0, y: 0}
 --- !u!212 &1819747469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5091,6 +5112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints:
+  - {x: 0, y: 0}
 --- !u!212 &1963753727
 SpriteRenderer:
   m_ObjectHideFlags: 0
