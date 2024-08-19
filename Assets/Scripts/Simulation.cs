@@ -67,6 +67,7 @@ public class Simulation : MonoBehaviour
         {
             levelFinished = true;
             levelFinishedTimer = Time.time;
+            FindObjectOfType<BGMHandler>().PlaySFX(1);
         }
 
         if (levelFinished && !sandstormStarted && Time.time - levelFinishedTimer > SANDSTORM_START_TIME)
@@ -138,7 +139,6 @@ public class Simulation : MonoBehaviour
     public void NextScene()
     {
         audioVolumeValue = FindObjectOfType<Slider>().value;
-        FindObjectOfType<BGMHandler>().PlaySFX(1);
         StartCoroutine(LoadNextScene());
     }
 
