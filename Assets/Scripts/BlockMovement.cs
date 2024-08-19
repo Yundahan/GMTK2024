@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
-    public GameObject selectionArea;
-
+    private GameObject selectionArea;
     private GameObject firstScale;
     private GameObject secondScale;
     private Simulation simulation;
@@ -27,6 +26,7 @@ public class BlockMovement : MonoBehaviour
     {
         ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
         simulation = FindObjectOfType<Simulation>();
+        selectionArea = FindObjectOfType<SelectionArea>().gameObject;
 
         if (scales.Length >= 2)
         {

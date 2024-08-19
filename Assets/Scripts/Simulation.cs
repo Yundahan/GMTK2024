@@ -17,14 +17,17 @@ public class Simulation : MonoBehaviour
     private BlockMovement[] buildingBlocks;
     private ScaleArea[] scaleAreas;
     private SelectionArea selectionArea;
+    private LevelTransitionAnim levelTransitionAnim;
 
     private float LEVEL_START_TIME = 1f;
-    private float LEVEL_END_TIME = 1f;
+    private float LEVEL_END_TIME = 1.5f;
+    private float SANDSTORM_START_TIME = 0.75f;
 
     private float totalBlockWeight;
     private float levelStartedTimer;
     private float levelFinishedTimer;
     private bool levelFinished;
+    private bool sandstormStarted;
 
     static float audioVolumeValue = 0.191F;
     
@@ -34,6 +37,7 @@ public class Simulation : MonoBehaviour
         buildingBlocks = FindObjectsOfType<BlockMovement>();
         scaleAreas = FindObjectsOfType<ScaleArea>();
         selectionArea = FindObjectOfType<SelectionArea>();
+        levelTransitionAnim = FindObjectOfType<LevelTransitionAnim>(true);
         ScaleWeight[] scales = FindObjectsOfType<ScaleWeight>();
 
         if (scales.Length >= 2)
@@ -51,6 +55,7 @@ public class Simulation : MonoBehaviour
 
         levelStartedTimer = Time.time;
         levelFinished = false;
+        sandstormStarted = false;
         FindObjectOfType<BGMHandler>().SetLevelTier(levelAudioTier);
         FindObjectOfType<Slider>().value = audioVolumeValue;
     }
@@ -64,8 +69,16 @@ public class Simulation : MonoBehaviour
             levelFinishedTimer = Time.time;
         }
 
+        if (levelFinished && !sandstormStarted && Time.time - levelFinishedTimer > SANDSTORM_START_TIME)
+        {
+            sandstormStarted = true;
+            levelTransitionAnim.enabled = true;
+            levelTransitionAnim.StartSandstorm();
+        }
+
         if (levelFinished && Time.time - levelFinishedTimer > LEVEL_END_TIME)
         {
+            levelFinishedTimer = Time.time;
             NextScene();
         }
     }
