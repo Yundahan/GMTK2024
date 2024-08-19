@@ -34,11 +34,14 @@ public class BalkenBieger : MonoBehaviour
         bool rightScaleHigher = rightScale.transform.position.y > leftScale.transform.position.y;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, rightScaleHigher ? angle : -angle));
 
-        TurnZeiger();
+        TurnZeiger(angle);
     }
 
-    private void TurnZeiger()
+    private void TurnZeiger(float balkenAngle)
     {
+        //WIP
+        float zeigerAngle = zeiger.transform.rotation.z;
+
         if (leftScale.GetWeight() < rightScale.GetWeight())
         {
             zeiger.GetComponent<SpriteRenderer>().sprite = zeigerDark;

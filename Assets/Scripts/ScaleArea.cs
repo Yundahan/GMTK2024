@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class ScaleArea : MonoBehaviour
 {
+    public Vector2[] midpoints;
+
     private ScaleWeight scaleweight;
 
     // Start is called before the first frame update
@@ -22,10 +25,24 @@ public class ScaleArea : MonoBehaviour
 
             foreach (Vector3 point in colliderPoints)
             {
-                if (!IsPointInArea(point))
+                if (!IsPointInArea(point, false))
                 {
                     isOutside = true;
                     break;
+                }
+            }
+
+            if (!isOutside)
+            {
+                Vector3[] midpoints = go.GetComponent<BlockMovement>().GetMidpointsInWorldSpace();
+
+                foreach (Vector2 midpoint in midpoints)
+                {
+                    if (!IsPointInArea(midpoint, true))
+                    {
+                        isOutside = true;
+                        break;
+                    }
                 }
             }
 
@@ -46,9 +63,18 @@ public class ScaleArea : MonoBehaviour
         return false;
     }
 
-    private bool IsPointInArea(Vector3 point)
+    private bool IsPointInArea(Vector3 point, bool midpointCheck)
     {
-        Vector2[] areaPoints = GetComponent<PolygonCollider2D>().points;
+        Vector2[] areaPoints;
+
+        if (midpointCheck)
+        {
+            areaPoints = midpoints;
+        } else
+        {
+            areaPoints = GetComponent<PolygonCollider2D>().points;
+        }
+
         point = transform.InverseTransformPoint(point);
 
         foreach (Vector2 areaPoint in areaPoints)
