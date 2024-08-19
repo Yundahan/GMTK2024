@@ -148,6 +148,12 @@ public class BlockMovement : MonoBehaviour
         return colliderPointsInWorldSpace;
     }
 
+    public Vector3[] GetMidpointsInWorldSpace()
+    {
+        Vector3[] midpointsInWorldSpace = midpoints.Select(point => transform.TransformPoint(point)).ToArray();
+        return midpointsInWorldSpace;
+    }
+
     private bool CheckPositionValid(Vector3 changeVector)
     {
         foreach (GameObject go in currentCollisions)
