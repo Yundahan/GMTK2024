@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleRange: 1
   nextLevel: Level17
-  levelAudioTier: 1
+  levelAudioTier: 3
 --- !u!1 &521331333
 GameObject:
   m_ObjectHideFlags: 0
