@@ -50,7 +50,7 @@ public class Simulation : MonoBehaviour
 
         foreach (BlockMovement block in FindObjectOfType<Simulation>().GetAllBuildingBlocks())
         {
-            totalBlockWeight += block.GetComponent<Rigidbody2D>().mass;
+            totalBlockWeight += block.GetComponent<Rigidbody2D>().mass * 2;
         }
 
         levelStartedTimer = Time.time;

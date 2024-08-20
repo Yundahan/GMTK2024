@@ -63,7 +63,7 @@ public class ScaleWeight : MonoBehaviour
             BlockMovement block = go.GetComponent<BlockMovement>();
             if (block != null && !block.IsBeingDragged() && block.GetWeightCounts())
             {
-                weight += Mathf.RoundToInt(go.GetComponent<Rigidbody2D>().mass);
+                weight += Mathf.RoundToInt(go.GetComponent<Rigidbody2D>().mass * 2);
             }
         }
 
