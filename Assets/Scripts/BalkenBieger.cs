@@ -66,8 +66,9 @@ public class BalkenBieger : MonoBehaviour
                 zeigerAngle -= zeigerAngle / Mathf.Abs(zeigerAngle) * ANGULAR_INDICATOR_SPEED;
                 zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
             }
+            FindObjectOfType<BGMHandler>().PlaySFX(2);
+            zeiger.sprite = zeigerGlowing;
 
-             zeiger.sprite = zeigerGlowing;
         }
     }
 }
