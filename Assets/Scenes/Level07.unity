@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: f6f2154d91e903c4e90915845ed6d75c, type: 2}
-  slider: {fileID: 0}
+  slider: {fileID: 1268302908}
   sources:
   - {fileID: 250908008}
   - {fileID: 250908007}
