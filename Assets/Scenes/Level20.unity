@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 8024208}
   - component: {fileID: 8024207}
   m_Layer: 0
-  m_Name: Triangle1b (2)
+  m_Name: Triangle2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 215509080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11, y: -4.53, z: 0}
+  m_LocalPosition: {x: -8, y: -6.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 264746628}
   - component: {fileID: 264746627}
   m_Layer: 0
-  m_Name: Praallelogram1g (1)
+  m_Name: Praallelogram2g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1754,7 +1754,7 @@ Transform:
   m_GameObject: {fileID: 264746625}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -6.58, z: 0}
+  m_LocalPosition: {x: -12.5, y: -5.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2983,7 +2983,7 @@ GameObject:
   - component: {fileID: 620120429}
   - component: {fileID: 620120428}
   m_Layer: 0
-  m_Name: Triangle1b (3)
+  m_Name: Triangle3b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3513,7 +3513,7 @@ GameObject:
   - component: {fileID: 798513171}
   - component: {fileID: 798513170}
   m_Layer: 0
-  m_Name: Praallelogram1s (1)
+  m_Name: Praallelogram2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4342,7 +4342,7 @@ GameObject:
   - component: {fileID: 852434898}
   - component: {fileID: 852434897}
   m_Layer: 0
-  m_Name: Roof1g (1)
+  m_Name: Roof2g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4523,7 +4523,7 @@ GameObject:
   - component: {fileID: 874628793}
   - component: {fileID: 874628792}
   m_Layer: 0
-  m_Name: CornerThing1s (1)
+  m_Name: CornerThing2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6876,7 +6876,7 @@ GameObject:
   - component: {fileID: 1456502847}
   - component: {fileID: 1456502846}
   m_Layer: 0
-  m_Name: Praallelogram1g (2)
+  m_Name: Praallelogram3g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7443,7 +7443,7 @@ GameObject:
   - component: {fileID: 1510370930}
   - component: {fileID: 1510370929}
   m_Layer: 0
-  m_Name: Triangle1b (1)
+  m_Name: Triangle4b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7703,7 +7703,7 @@ GameObject:
   - component: {fileID: 1543517493}
   - component: {fileID: 1543517492}
   m_Layer: 0
-  m_Name: Triangle1s (2)
+  m_Name: Triangle2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8016,7 +8016,7 @@ GameObject:
   - component: {fileID: 1575099265}
   - component: {fileID: 1575099264}
   m_Layer: 0
-  m_Name: Triangle1s (1)
+  m_Name: Triangle4s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8580,8 +8580,8 @@ Transform:
   m_GameObject: {fileID: 1728809610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -8, y: -5.57, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.98, y: -5.61, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1167567924}
@@ -8746,7 +8746,7 @@ GameObject:
   - component: {fileID: 1733063173}
   - component: {fileID: 1733063172}
   m_Layer: 0
-  m_Name: Triangle1s (3)
+  m_Name: Triangle3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9217,7 +9217,7 @@ GameObject:
   - component: {fileID: 1802844318}
   - component: {fileID: 1802844317}
   m_Layer: 0
-  m_Name: BankOfChina1s (1)
+  m_Name: BankOfChina2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9232,7 +9232,7 @@ Transform:
   m_GameObject: {fileID: 1802844315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -9, y: -5.01, z: 0}
+  m_LocalPosition: {x: -9, y: -3.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10449,7 +10449,7 @@ Transform:
   m_GameObject: {fileID: 2085463146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: -4.51, z: 0}
+  m_LocalPosition: {x: -12, y: -5.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
