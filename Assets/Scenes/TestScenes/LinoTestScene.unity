@@ -181,9 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!60 &283470570
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -407,10 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94968ed5fcfc34abbcd8b042528c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftScale: {fileID: 1944163422}
-  rightScale: {fileID: 1022794680}
   scaleRange: 2
   nextLevel: Level02
+  levelAudioTier: 0
 --- !u!1 &582434231
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,9 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!61 &582434234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -728,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89fb31e57658894f98054e1d765b0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints: []
 --- !u!1 &1007945485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,9 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!61 &1153135675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1442,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89fb31e57658894f98054e1d765b0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  midpoints: []
 --- !u!1 &1678604350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,9 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!61 &1747138429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1928,9 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!61 &1997227283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2233,9 +2224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionArea: {fileID: 1411094508}
-  leftScale: {fileID: 839363473}
-  rightScale: {fileID: 1499492525}
+  midpoints: []
 --- !u!212 &2133276434
 SpriteRenderer:
   m_ObjectHideFlags: 0
