@@ -10,7 +10,7 @@ public class BalkenBieger : MonoBehaviour
     public GameObject zeigerParent;
     public SpriteRenderer zeiger;
 
-    private float ANGULAR_INDICATOR_SPEED = 0.3f;
+    private float ANGULAR_INDICATOR_SPEED = 100f;
 
     private bool playedScaleEvenSound = true;
     private float horizontalScaleDistance;
@@ -34,16 +34,16 @@ public class BalkenBieger : MonoBehaviour
         bool rightScaleHigher = rightScale.transform.position.y > leftScale.transform.position.y;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, rightScaleHigher ? angle : -angle));
 
-        TurnZeiger();
+        TurnZeiger(Time.deltaTime);
     }
 
-    private void TurnZeiger()
+    private void TurnZeiger(float deltaTime)
     {
         if (leftScale.GetWeight() < rightScale.GetWeight())
         {
             if (zeigerAngle >= -45f)
             {
-                zeigerAngle -= ANGULAR_INDICATOR_SPEED;
+                zeigerAngle -= ANGULAR_INDICATOR_SPEED * deltaTime;
                 zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
             }
 
@@ -53,7 +53,7 @@ public class BalkenBieger : MonoBehaviour
         {
             if (zeigerAngle <= 45f)
             {
-                zeigerAngle += ANGULAR_INDICATOR_SPEED;
+                zeigerAngle += ANGULAR_INDICATOR_SPEED * deltaTime;
                 zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
             }
 
@@ -63,7 +63,7 @@ public class BalkenBieger : MonoBehaviour
         {
             if (Mathf.Abs(zeigerAngle) >= 0.1f)
             {
-                zeigerAngle -= zeigerAngle / Mathf.Abs(zeigerAngle) * ANGULAR_INDICATOR_SPEED;
+                zeigerAngle -= zeigerAngle / Mathf.Abs(zeigerAngle) * ANGULAR_INDICATOR_SPEED * deltaTime;
                 zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
             }
 
