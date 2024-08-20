@@ -425,8 +425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midpoints:
   - {x: 0, y: 0}
-  - {x: -0.5, y: 0}
-  - {x: 0.5, y: 0}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
 --- !u!212 &9360558
 SpriteRenderer:
   m_ObjectHideFlags: 0
