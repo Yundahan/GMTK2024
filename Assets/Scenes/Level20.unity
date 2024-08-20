@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleRange: 1
   nextLevel: StartScene
-  levelAudioTier: 1
+  levelAudioTier: 6
 --- !u!1 &529037399
 GameObject:
   m_ObjectHideFlags: 0
