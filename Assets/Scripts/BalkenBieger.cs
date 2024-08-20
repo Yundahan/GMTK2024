@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class BalkenBieger : MonoBehaviour
@@ -15,6 +16,7 @@ public class BalkenBieger : MonoBehaviour
 
     private float ANGULAR_INDICATOR_SPEED = 0.3f;
 
+    private bool playedScaleEvenSound = true;
     private float horizontalScaleDistance;
     private float initialXScale;
     private float zeigerAngle = 0f;
@@ -50,6 +52,7 @@ public class BalkenBieger : MonoBehaviour
             }
 
             zeiger.sprite = zeigerDark;
+            playedScaleEvenSound = false;
         } else if (leftScale.GetWeight() > rightScale.GetWeight())
         {
             if (zeigerAngle <= 45f)
@@ -59,6 +62,7 @@ public class BalkenBieger : MonoBehaviour
             }
 
             zeiger.sprite = zeigerDark;
+            playedScaleEvenSound = false;
         } else //weights are even
         {
             if (Mathf.Abs(zeigerAngle) >= 0.1f)
@@ -66,9 +70,14 @@ public class BalkenBieger : MonoBehaviour
                 zeigerAngle -= zeigerAngle / Mathf.Abs(zeigerAngle) * ANGULAR_INDICATOR_SPEED;
                 zeigerParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, zeigerAngle));
             }
-            FindObjectOfType<BGMHandler>().PlaySFX(2);
+
             zeiger.sprite = zeigerGlowing;
 
+            if (!playedScaleEvenSound)
+            {
+                playedScaleEvenSound = true;
+                FindObjectOfType<BGMHandler>().PlaySFX(2);
+            }
         }
     }
 }

@@ -3761,7 +3761,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  midpoints: []
+  midpoints:
+  - {x: -0.5, y: 0.5}
+  - {x: 0.5, y: 0.5}
+  - {x: -0.5, y: -0.5}
+  - {x: 0.5, y: -0.5}
 --- !u!212 &1819747469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4428,7 +4432,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c6ba26efb8ac74dac1499d7068d174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  midpoints: []
+  midpoints:
+  - {x: 0.5, y: 1}
+  - {x: -0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: -0.5, y: -1}
+  - {x: 0.5, y: -1}
 --- !u!212 &1963753727
 SpriteRenderer:
   m_ObjectHideFlags: 0
