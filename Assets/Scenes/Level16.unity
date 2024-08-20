@@ -2593,7 +2593,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: a676fbb4674199e4781e1dbf8110cd48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71a4d36231af4804ea5f6301fa95ad87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2632,15 +2632,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   midpoints:
+  - {x: -2, y: 1}
   - {x: -1, y: 1}
-  - {x: 0, y: 1}
   - {x: 1, y: 1}
+  - {x: 2, y: 1}
+  - {x: -2, y: 0}
   - {x: -1, y: 0}
   - {x: 0, y: 0}
   - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: -2, y: -1}
   - {x: -1, y: -1}
   - {x: 0, y: -1}
   - {x: 1, y: -1}
+  - {x: 2, y: -1}
 --- !u!60 &839363478
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2677,7 +2682,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
+    oldSize: {x: 5, y: 3}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2686,21 +2691,27 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.5, y: 0.5}
-      - {x: 0.5, y: 1.5}
       - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: 1.5}
-      - {x: -1.5, y: 1.5}
       - {x: -1.5, y: 0.5}
-      - {x: -1.5, y: -0.5}
+      - {x: -1.5, y: 1.5}
+      - {x: -2.5, y: 1.5}
+      - {x: -2.5, y: 0.5}
+      - {x: -2.5, y: -0.5}
+      - {x: -2.5, y: -1.5}
       - {x: -1.5, y: -1.5}
-      - {x: -0.5, y: -1.4990852}
+      - {x: -1.5, y: -0.5}
       - {x: -0.5, y: -0.5}
+      - {x: -0.5, y: -1.5}
       - {x: 0.5, y: -1.5}
       - {x: 0.5, y: -0.5}
-      - {x: 1.5, y: -1.5}
       - {x: 1.5, y: -0.5}
-      - {x: 1.5, y: 0.5}
+      - {x: 1.5, y: -1.5}
+      - {x: 2.5, y: -1.5}
+      - {x: 2.5, y: -0.5}
+      - {x: 2.5, y: 0.5}
+      - {x: 2.5, y: 1.5}
       - {x: 1.5, y: 1.5}
+      - {x: 1.5, y: 0.5}
   m_UseDelaunayMesh: 0
 --- !u!1 &869279794
 GameObject:
@@ -4725,7 +4736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 8e7112952ed60c54d821125803cd1c30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71a4d36231af4804ea5f6301fa95ad87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4745,7 +4756,7 @@ Transform:
   m_GameObject: {fileID: 1499492525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.21400003, z: 0}
+  m_LocalPosition: {x: 0, y: -0.117, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4764,11 +4775,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   midpoints:
-  - {x: -1, y: 0.5}
-  - {x: 0, y: 0.5}
-  - {x: -1, y: -0.5}
-  - {x: 0, y: -0.5}
-  - {x: 1, y: -0.5}
+  - {x: -2, y: 1}
+  - {x: -1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 2, y: 1}
+  - {x: -2, y: 0}
+  - {x: -1, y: 0}
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  - {x: -2, y: -1}
+  - {x: -1, y: -1}
+  - {x: 0, y: -1}
+  - {x: 1, y: -1}
+  - {x: 2, y: -1}
 --- !u!60 &1499492530
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4805,7 +4825,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 2}
+    oldSize: {x: 5, y: 3}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4813,16 +4833,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: 1}
-      - {x: -1.5, y: 1}
-      - {x: -1.5, y: 0}
-      - {x: -1.5, y: -1}
-      - {x: -0.5, y: -1}
-      - {x: 0.5, y: -1}
-      - {x: 1.5, y: -1}
-      - {x: 1.5, y: 0}
-      - {x: 0.5, y: 0}
-      - {x: 0.5, y: 1}
+    - - {x: 0.5, y: 0.5}
+      - {x: -0.5, y: 0.5}
+      - {x: -1.5, y: 0.5}
+      - {x: -1.5, y: 1.5}
+      - {x: -2.5, y: 1.5}
+      - {x: -2.5, y: 0.5}
+      - {x: -2.5, y: -0.5}
+      - {x: -2.5, y: -1.5}
+      - {x: -1.5, y: -1.5}
+      - {x: -1.5, y: -0.5}
+      - {x: -0.5, y: -0.5}
+      - {x: -0.5, y: -1.5}
+      - {x: 0.5, y: -1.5}
+      - {x: 0.5, y: -0.5}
+      - {x: 1.5, y: -0.5}
+      - {x: 1.5, y: -1.5}
+      - {x: 2.5, y: -1.5}
+      - {x: 2.5, y: -0.5}
+      - {x: 2.5, y: 0.5}
+      - {x: 2.5, y: 1.5}
+      - {x: 1.5, y: 1.5}
+      - {x: 1.5, y: 0.5}
   m_UseDelaunayMesh: 0
 --- !u!1 &1509534122
 GameObject:
