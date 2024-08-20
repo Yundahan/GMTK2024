@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 259998976}
   - component: {fileID: 259998975}
   m_Layer: 0
-  m_Name: Rectangle1
+  m_Name: Rectangle1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 615975053}
   - component: {fileID: 615975056}
   m_Layer: 0
-  m_Name: DoubleTriangle1
+  m_Name: DoubleTriangle1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 704076879}
   - component: {fileID: 704076878}
   m_Layer: 0
-  m_Name: Square2
+  m_Name: Square2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4401,7 +4401,7 @@ GameObject:
   - component: {fileID: 1400423795}
   - component: {fileID: 1400423794}
   m_Layer: 0
-  m_Name: Square1
+  m_Name: Square1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5873,7 +5873,7 @@ GameObject:
   - component: {fileID: 1819697807}
   - component: {fileID: 1819697810}
   m_Layer: 0
-  m_Name: WeirdHouse1
+  m_Name: WeirdHouse1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6054,7 +6054,7 @@ GameObject:
   - component: {fileID: 1819747467}
   - component: {fileID: 1819747466}
   m_Layer: 0
-  m_Name: Triangle2
+  m_Name: Triangle2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6305,7 +6305,7 @@ GameObject:
   - component: {fileID: 1863804933}
   - component: {fileID: 1863804932}
   m_Layer: 0
-  m_Name: Rectangle2
+  m_Name: Rectangle2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6696,7 +6696,7 @@ GameObject:
   - component: {fileID: 1963753725}
   - component: {fileID: 1963753728}
   m_Layer: 0
-  m_Name: Triangle1
+  m_Name: Triangle1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

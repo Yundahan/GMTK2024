@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 857758524}
   - component: {fileID: 857758523}
   m_Layer: 0
-  m_Name: BankOfChina1s (1)
+  m_Name: BankOfChina2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7008,7 +7008,7 @@ GameObject:
   - component: {fileID: 1861634205}
   - component: {fileID: 1861634204}
   m_Layer: 0
-  m_Name: Square1b
+  m_Name: Square4b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7269,7 +7269,7 @@ GameObject:
   - component: {fileID: 1913306481}
   - component: {fileID: 1913306480}
   m_Layer: 0
-  m_Name: Square2s (1)
+  m_Name: Square3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7808,7 +7808,7 @@ GameObject:
   - component: {fileID: 2125559080}
   - component: {fileID: 2125559079}
   m_Layer: 0
-  m_Name: BankOfChina1b
+  m_Name: BankOfChina3b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 16851154}
   - component: {fileID: 16851153}
   m_Layer: 0
-  m_Name: BigTriangle1
+  m_Name: BigTriangle1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 324091684}
   - component: {fileID: 324091683}
   m_Layer: 0
-  m_Name: DoubleTriangle1
+  m_Name: DoubleTriangle1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 384643027}
   - component: {fileID: 384643026}
   m_Layer: 0
-  m_Name: BankOfChina2
+  m_Name: BankOfChina2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,7 +1520,7 @@ GameObject:
   - component: {fileID: 622738706}
   - component: {fileID: 622738705}
   m_Layer: 0
-  m_Name: Triangle1
+  m_Name: Triangle1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3085,8 +3085,8 @@ Transform:
   - {fileID: 1343644563}
   - {fileID: 384643030}
   - {fileID: 2017773446}
-  - {fileID: 1673967639}
   - {fileID: 324091682}
+  - {fileID: 1673967639}
   - {fileID: 16851152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3454,7 +3454,7 @@ GameObject:
   - component: {fileID: 1343644560}
   - component: {fileID: 1343644559}
   m_Layer: 0
-  m_Name: BankOfChina1
+  m_Name: BankOfChina1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3633,7 +3633,7 @@ GameObject:
   - component: {fileID: 1369530836}
   - component: {fileID: 1369530835}
   m_Layer: 0
-  m_Name: Triangle3
+  m_Name: Triangle3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5359,7 +5359,7 @@ GameObject:
   - component: {fileID: 1673967641}
   - component: {fileID: 1673967640}
   m_Layer: 0
-  m_Name: Gemstone1
+  m_Name: Gemstone1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5973,7 +5973,7 @@ GameObject:
   - component: {fileID: 1796502173}
   - component: {fileID: 1796502172}
   m_Layer: 0
-  m_Name: Triangle2
+  m_Name: Triangle2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6799,7 +6799,7 @@ GameObject:
   - component: {fileID: 2017773448}
   - component: {fileID: 2017773447}
   m_Layer: 0
-  m_Name: BankOfChina3
+  m_Name: BankOfChina3b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 199304172}
   - component: {fileID: 199304171}
   m_Layer: 0
-  m_Name: Triangle1b (1)
+  m_Name: Triangle8b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 239247936}
   - component: {fileID: 239247935}
   m_Layer: 0
-  m_Name: Triangle2
+  m_Name: Triangle4s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 332625862}
   - component: {fileID: 332625861}
   m_Layer: 0
-  m_Name: Triangle1b (6)
+  m_Name: Triangle13b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 460708204}
   - component: {fileID: 460708203}
   m_Layer: 0
-  m_Name: Praallelogram1b (1)
+  m_Name: Praallelogram3b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 469232644}
   - component: {fileID: 469232643}
   m_Layer: 0
-  m_Name: Praallelogram1b
+  m_Name: Praallelogram2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1998,7 +1998,7 @@ GameObject:
   - component: {fileID: 528820045}
   - component: {fileID: 528820044}
   m_Layer: 0
-  m_Name: Triangle1b (7)
+  m_Name: Triangle14b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2639,7 +2639,7 @@ GameObject:
   - component: {fileID: 682999437}
   - component: {fileID: 682999436}
   m_Layer: 0
-  m_Name: BankOfChina2 (2)
+  m_Name: BankOfChina4s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4193,7 +4193,7 @@ GameObject:
   - component: {fileID: 1144432439}
   - component: {fileID: 1144432438}
   m_Layer: 0
-  m_Name: Triangle1b (4)
+  m_Name: Triangle11b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4369,7 +4369,7 @@ GameObject:
   - component: {fileID: 1151201263}
   - component: {fileID: 1151201262}
   m_Layer: 0
-  m_Name: Triangle1 (1)
+  m_Name: Triangle2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4566,12 +4566,6 @@ Transform:
   - {fileID: 239247934}
   - {fileID: 1534557101}
   - {fileID: 1823353008}
-  - {fileID: 1343644563}
-  - {fileID: 1266509552}
-  - {fileID: 2123138820}
-  - {fileID: 682999435}
-  - {fileID: 1810600119}
-  - {fileID: 1082875995}
   - {fileID: 1361371731}
   - {fileID: 199304170}
   - {fileID: 2061134709}
@@ -4581,9 +4575,15 @@ Transform:
   - {fileID: 332625860}
   - {fileID: 528820043}
   - {fileID: 1947007403}
-  - {fileID: 527217683}
+  - {fileID: 1343644563}
+  - {fileID: 1266509552}
+  - {fileID: 2123138820}
+  - {fileID: 682999435}
+  - {fileID: 1810600119}
+  - {fileID: 1082875995}
   - {fileID: 469232642}
   - {fileID: 460708202}
+  - {fileID: 527217683}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266509551
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 1266509554}
   - component: {fileID: 1266509553}
   m_Layer: 0
-  m_Name: BankOfChina2
+  m_Name: BankOfChina2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4895,7 +4895,7 @@ GameObject:
   - component: {fileID: 1343644560}
   - component: {fileID: 1343644559}
   m_Layer: 0
-  m_Name: BankOfChina1
+  m_Name: BankOfChina1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5126,7 +5126,7 @@ GameObject:
   - component: {fileID: 1361371733}
   - component: {fileID: 1361371732}
   m_Layer: 0
-  m_Name: Triangle1b
+  m_Name: Triangle7b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 1369530836}
   - component: {fileID: 1369530835}
   m_Layer: 0
-  m_Name: Triangle1
+  m_Name: Triangle1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5478,7 +5478,7 @@ GameObject:
   - component: {fileID: 1466222046}
   - component: {fileID: 1466222045}
   m_Layer: 0
-  m_Name: Triangle1b (5)
+  m_Name: Triangle12b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5776,7 +5776,7 @@ GameObject:
   - component: {fileID: 1534557103}
   - component: {fileID: 1534557102}
   m_Layer: 0
-  m_Name: Triangle2 (1)
+  m_Name: Triangle5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7127,7 +7127,7 @@ GameObject:
   - component: {fileID: 1588846505}
   - component: {fileID: 1588846504}
   m_Layer: 0
-  m_Name: Triangle1 (2)
+  m_Name: Triangle3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7866,7 +7866,7 @@ GameObject:
   - component: {fileID: 1810600121}
   - component: {fileID: 1810600120}
   m_Layer: 0
-  m_Name: BankOfChina2 (3)
+  m_Name: BankOfChina5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8045,7 +8045,7 @@ GameObject:
   - component: {fileID: 1823353010}
   - component: {fileID: 1823353009}
   m_Layer: 0
-  m_Name: Triangle2 (2)
+  m_Name: Triangle6s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8632,7 +8632,7 @@ GameObject:
   - component: {fileID: 1925150610}
   - component: {fileID: 1925150609}
   m_Layer: 0
-  m_Name: Triangle1b (3)
+  m_Name: Triangle10b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8904,7 +8904,7 @@ GameObject:
   - component: {fileID: 1947007405}
   - component: {fileID: 1947007404}
   m_Layer: 0
-  m_Name: Triangle1b (8)
+  m_Name: Triangle15b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9381,7 +9381,7 @@ GameObject:
   - component: {fileID: 2061134711}
   - component: {fileID: 2061134710}
   m_Layer: 0
-  m_Name: Triangle1b (2)
+  m_Name: Triangle9b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9741,7 +9741,7 @@ GameObject:
   - component: {fileID: 2123138822}
   - component: {fileID: 2123138821}
   m_Layer: 0
-  m_Name: BankOfChina2 (1)
+  m_Name: BankOfChina3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

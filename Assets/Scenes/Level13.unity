@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 763072233}
   - component: {fileID: 763072232}
   m_Layer: 0
-  m_Name: Rectangle1s (1)
+  m_Name: Rectangle2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

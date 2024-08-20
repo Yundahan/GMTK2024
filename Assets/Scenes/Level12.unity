@@ -1299,7 +1299,7 @@ GameObject:
   - component: {fileID: 619233753}
   - component: {fileID: 619233752}
   m_Layer: 0
-  m_Name: Square1g
+  m_Name: Square3g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5290,7 +5290,7 @@ GameObject:
   - component: {fileID: 1876240960}
   - component: {fileID: 1876240959}
   m_Layer: 0
-  m_Name: Square1s
+  m_Name: Square2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

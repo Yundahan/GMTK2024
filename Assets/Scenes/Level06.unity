@@ -5033,7 +5033,7 @@ GameObject:
   - component: {fileID: 1819747467}
   - component: {fileID: 1819747470}
   m_Layer: 0
-  m_Name: BigSquare1
+  m_Name: BigSquare1s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5619,7 +5619,7 @@ GameObject:
   - component: {fileID: 1963753725}
   - component: {fileID: 1963753728}
   m_Layer: 0
-  m_Name: Klo1
+  m_Name: Klo1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

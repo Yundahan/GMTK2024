@@ -775,6 +775,7 @@ Transform:
   m_Children:
   - {fileID: 538654286}
   - {fileID: 1678515486}
+  - {fileID: 1526224111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271662565
@@ -1631,7 +1632,7 @@ GameObject:
   - component: {fileID: 619336236}
   - component: {fileID: 619336235}
   m_Layer: 0
-  m_Name: SmallL1s (1)
+  m_Name: SmallL2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1993,7 +1994,7 @@ GameObject:
   - component: {fileID: 800104468}
   - component: {fileID: 800104467}
   m_Layer: 0
-  m_Name: BigSquare1s
+  m_Name: BigSquare2s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4380,20 +4381,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 36907359}
+  - {fileID: 619336234}
   - {fileID: 1357841607}
   - {fileID: 1769140804}
   - {fileID: 1583253049}
-  - {fileID: 1950613642}
-  - {fileID: 1121943413}
-  - {fileID: 1497220309}
-  - {fileID: 800104466}
-  - {fileID: 1677376253}
-  - {fileID: 36907359}
-  - {fileID: 619336234}
   - {fileID: 1543635075}
   - {fileID: 1471595488}
+  - {fileID: 1677376253}
+  - {fileID: 1950613642}
+  - {fileID: 800104466}
+  - {fileID: 1121943413}
+  - {fileID: 1497220309}
   - {fileID: 1618526459}
-  - {fileID: 1526224111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1246367614
@@ -4791,7 +4791,7 @@ GameObject:
   - component: {fileID: 1471595490}
   - component: {fileID: 1471595489}
   m_Layer: 0
-  m_Name: BigL1s (1)
+  m_Name: BigL5s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4977,7 +4977,7 @@ GameObject:
   - component: {fileID: 1497220311}
   - component: {fileID: 1497220310}
   m_Layer: 0
-  m_Name: Klo1b (1)
+  m_Name: Klo2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5329,11 +5329,11 @@ Transform:
   m_GameObject: {fileID: 1526224110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22160006, y: -0.05940008, z: 0}
+  m_LocalPosition: {x: -1.0756762, y: 2.9448795, z: 0.013572052}
   m_LocalScale: {x: 1.5121821, y: 1.5110135, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1167567924}
+  m_Father: {fileID: 254523034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1526224112
 SpriteRenderer:
@@ -5401,7 +5401,7 @@ GameObject:
   - component: {fileID: 1543635077}
   - component: {fileID: 1543635076}
   m_Layer: 0
-  m_Name: BigL1s
+  m_Name: BigL4s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5808,7 +5808,7 @@ GameObject:
   - component: {fileID: 1583253051}
   - component: {fileID: 1583253050}
   m_Layer: 0
-  m_Name: BigL1b (1)
+  m_Name: BigL3b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5994,7 +5994,7 @@ GameObject:
   - component: {fileID: 1618526461}
   - component: {fileID: 1618526460}
   m_Layer: 0
-  m_Name: Klo1s
+  m_Name: Klo3s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6550,7 +6550,7 @@ GameObject:
   - component: {fileID: 1769140806}
   - component: {fileID: 1769140805}
   m_Layer: 0
-  m_Name: BigL1b (2)
+  m_Name: BigL2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
